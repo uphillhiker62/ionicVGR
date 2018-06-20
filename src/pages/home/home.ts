@@ -1,3 +1,4 @@
+import { ListPage } from './../list/list';
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
@@ -7,8 +8,16 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
+
+
   constructor(public navCtrl: NavController) {
 
+  }
+
+  listBtn(sortBy: string) {
+    this.navCtrl.push(ListPage, {
+      sortBy: sortBy
+    });
   }
 
 }
